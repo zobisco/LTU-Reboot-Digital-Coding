@@ -4,8 +4,18 @@ a {
 }
 
 header {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px;
   border: 1px solid red;
-  position: relative;
-  top: 0px;
-  right: 0px;
+}
+
+ol {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-evenly;
+  width: 380px;
 }
