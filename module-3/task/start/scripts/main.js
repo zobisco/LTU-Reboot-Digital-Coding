@@ -208,4 +208,75 @@ function multiplyBy( num ) {
 
 }
 
-multiplyBy( 10 );
+// multiplyBy( 10 );
+
+/*
+arr = shoppingCart
+
+totalPrice = 0;
+
+for
+  counter = 0
+  counter < arr.length
+  counter++
+
+  arr[counter].price * arr[counter].quantity
+
+*/
+
+let totalPriceOfShopping = ( arr ) => {
+  let totalPrice = 0;
+  for(let counter = 0; counter < arr.length; counter++ ) {
+    totalPrice = totalPrice + arr[counter].price * arr[counter].quantity;
+  }
+  return totalPrice.toFixed(2);
+}
+console.log( totalPriceOfShopping( shoppingCart ) );
+
+
+let discountToiletries = ( arr ) => {
+
+  let totalPrice  = 0;
+
+  for( let counter = 0; counter < arr.length; counter++ ) {
+
+    if( arr[counter].type === 'toiletries' ) {
+
+      let discount = ( arr[counter].price * 50 ) / 100; // BODMAS
+
+      totalPrice = totalPrice + ( arr[counter].price - discount ) * arr[counter].quantity;
+
+    } else {
+
+      totalPrice = totalPrice + arr[counter].price * arr[counter].quantity;
+
+    }
+
+  }
+  return totalPrice.toFixed(2);
+}
+
+console.log( discountToiletries( shoppingCart ) );
+
+
+const howMany = ( arr, type ) =>  {
+
+  let itemsOfType = arr.filter( item => item.type === type );
+
+  return itemsOfType.length;
+}
+
+
+console.log( howMany( shoppingCart, 'toiletries' ) );
+
+let login = false;
+
+if( login ) {
+  console.log('you are login');
+} else {
+  console.log('You are not logged in');
+}
+
+// Ternary Operator
+
+login ? console.log('you are login') : console.log('You are not logged in');
