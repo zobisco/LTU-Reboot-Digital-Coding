@@ -1,7 +1,7 @@
 body {
   margin: 0;
   padding: 0;
-  font-family: "Lexend Deca", sans-serif;
+  font-family: "KoHo", sans-serif;
 }
 
 .container {
@@ -54,7 +54,7 @@ main .image img {
 }
 
 button {
-  background-color: #f1f1f1;
+  background-color: green;
   font-size: 16px;
   letter-spacing: 0.5px;
   line-height: 0.9;
@@ -75,7 +75,7 @@ button {
   vertical-align: middle;
 }
 button:hover {
-  background-color: #a4a4a4;
+  background-color: red;
   color: #fff;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
@@ -87,6 +87,6 @@ footer {
 /* active */
 
 .active {
-  background-color: orange;
+  background-color: red;
   box-shadow: 0 19px 38px rgba(0, 0, 0, 0.3), 0 15px 12px rgba(0, 0, 0, 0.22);
 }
