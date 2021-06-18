@@ -1,10 +1,8 @@
-a {
-  color: grey;
-  font-size: 18px;
+body {
+  font-family: "Lexend Deca", sans-serif;
 }
 
 header {
-  border: 1px solid goldenrod;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -13,8 +11,65 @@ header {
 }
 
 ol {
-  border: 1px solid goldenrod;
   display: flex;
   justify-content: space-evenly;
   width: 380px;
+  list-style-type: none;
+}
+
+a {
+  color: grey;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+main {
+  /*border: 1px solid goldenrod;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  max-width: 584px;
+  margin: 60px auto;
+}
+
+.search-container {
+  border: 1px solid #dfe1e5;
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 40px;
+  width: 100%;
+  height: 44px;
+  padding: 5px 8px 0 16px;
+  border-radius: 24px;
+}
+
+.search-container:hover {
+  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+main input[type="text"] {
+  width: 100%;
+  margin-top: -4px;
+  font-size: 22px;
+  border: none;
+  font-family: "Lexend Deca", sans-serif;
+}
+
+main input[type="text"]:focus {
+  outline: none;
+}
+
+.search--logo {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
+  margin-right: auto;
+}
+
+.microphone--logo {
+  height: 30px;
+  width: 30px;
+  margin-top: 5px;
 }
