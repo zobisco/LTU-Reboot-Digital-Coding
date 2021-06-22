@@ -39,7 +39,7 @@
 1. Create a function called checkAvailability
 2. Add one ( 1 ) parameter to the function, one called : productInStock
 3. Inside the function console.log out productInStock
-4. Call the function totalPrice passing in the variable inStock
+4. Call the function checkAvailability passing in the variable inStock
 5. Convert your function into an arrow function
 
 ## Task 7
