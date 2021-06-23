@@ -28,12 +28,106 @@ let checkAvailability = productInStock => console.log( productInStock );
 
 // checkAvailability( inStock );
 
+function productDiscount() {
+
+  if( quantity > 2 ) {
+     let newPrice = ( price * quantity ) - discountAmount; // BODMAS
+     console.log( newPrice );
+  } else {
+    console.log( price * quantity);
+  }
+
+}
+
+// productDiscount();
+
+// let colour = 'pink';
+// let sky = 'blue';
+
+// if( colour === 'grey' && sky === 'blue') {
+//   console.log('Correct');
+// } else if( colour === 'orange') {
+//   console.log('Correct');
+// } else if( colour === 'blue') {
+//   console.log('Correct');
+// } else {
+//   console.log('Incorrect');
+// }
+
+// switch (colour) {
+//   case 'grey':
+//     console.log('Correct');
+//     break;
+//   case 'orange':
+//     console.log('Correct');
+//     break;
+//   case 'blue':
+//     console.log('Correct');
+//     break;
+//   default:
+//     console.log('Incorrect');
+//     break;
+// }
+
+function drinkOrder( drink, size ) {
+
+  switch( drink ) {
+    case 'cola' :
+      console.log(drink, size);
+      break;
+    case 'lemonade' :
+      console.log(drink, size);
+      break;
+    case 'orangeade' :
+      console.log(drink, size);
+      break;
+    default:
+      // console.log("We don't currently have a " + size + " " + drink + " , apologies");
+      console.log(`We don't currently have a ${size} ${drink}, apologies`);
+      break;
+  }
+
+}
+// drinkOrder('cola', 'X-Large');
+// drinkOrder('lemonade', 'Medium');
+// drinkOrder('orangeade', 'Small');
+
+function calculator( num1, num2, operator ) {
+
+  switch( operator ) {
+    case '+' :
+      console.log( `${num1} + ${num2} = ${num1 + num2} ` );
+      // console.log( num1 + " + " + num2 + " = " + ( num1 + num2) );
+      break;
+    case '-' :
+      console.log( `${num1} - ${num2} = ${num1 - num2} ` );
+      break;
+    case '*' :
+      console.log( `${num1} * ${num2} = ${num1 * num2} ` );
+      break;
+    case '/' :
+      console.log( `${num1} / ${num2} = ${num1 / num2} ` );
+      break;
+    default :
+      console.log(`${operator} does not exist`);
+      break;
+  }
+
+}
 
 
-let num = 50;
+// calculator( 1, 1, '+');
+// calculator( 10, 2, '-');
+// calculator( 5, 5, '*');
+// calculator( 25, 5, '/');
 
-if ( num != 50 ) {
-  console.log('If is true');
+let temperature = 30;
+let season = 'Summer';
+
+if( temperature < 30 || season === 'Spring') {
+  console.log('You should where just a t-shirt and shorts');
+} else if(season !== 'Spring') {
+  console.log('Its not spring');
 } else {
-  console.log('If is false');
+  console.log('You should where trousers and a jumper');
 }
