@@ -148,4 +148,4 @@ product.price = 2.09;
 
 product.shape = 'sphere';
 
-// console.log( product );
+// console.log( product ) 
