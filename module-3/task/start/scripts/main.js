@@ -121,13 +121,31 @@ function calculator( num1, num2, operator ) {
 // calculator( 5, 5, '*');
 // calculator( 25, 5, '/');
 
-let temperature = 30;
-let season = 'Summer';
+// let product = [
+//   productName,
+//   price,
+//   quantity,
+//   inStock,
+//   discountAmount
+// ];
 
-if( temperature < 30 || season === 'Spring') {
-  console.log('You should where just a t-shirt and shorts');
-} else if(season !== 'Spring') {
-  console.log('Its not spring');
-} else {
-  console.log('You should where trousers and a jumper');
-}
+// let firstItem = product[0];
+// let secondItem = product[1];
+// let lastItem = product[4];
+
+
+
+let product = {
+  productName : 'Apples',
+  price: 1.29,
+  quantity: 6,
+  inStock: true,
+  discountAmount: 0.35,
+  coloursAvailable : ['Green', 'Red', 'Yellow', 'Pink'],
+};
+
+product.price = 2.09;
+
+product.shape = 'sphere';
+
+// console.log( product );
