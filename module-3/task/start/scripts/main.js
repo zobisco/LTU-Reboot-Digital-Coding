@@ -149,3 +149,112 @@ product.price = 2.09;
 product.shape = 'sphere';
 
 // console.log( product ) 
+
+// console.log(shoppingBasket);
+
+function totalPriceOfShopping( arr ) {
+  let totalPrice = 0; // Total price of product
+
+  for( let counter = 0; counter < arr.length; counter++ ) { 
+    // the for loop goes over each item 
+    totalPrice = totalPrice + ( arr[counter].price * arr[counter].quantity );
+    
+  }
+
+  return totalPrice.toFixed(2);
+
+}
+
+// console.log( `Total Price : £ ${totalPriceOfShopping( shoppingBasket )}` );
+
+function discountToiletries( arr ) {
+  let totalPrice = 0;
+
+  for( let counter = 0; counter < arr.length; counter++ ) {
+
+    if(arr[counter].type === 'toiletries') { // checking to see if the type is toiletries
+
+      totalPrice = totalPrice +  ( arr[counter].price / 2 ) * arr[counter].quantity;
+
+    } else {
+
+      totalPrice = totalPrice + ( arr[counter].price * arr[counter].quantity );
+
+    }
+
+  }
+
+  return totalPrice.toFixed(2);
+
+}
+
+// console.log( `Total Price: £ ${discountToiletries(shoppingBasket)}` );
+
+
+function discount( arr, discountNum, type ) {
+  let totalPrice = 0;
+
+  for( let counter = 0; counter < arr.length; counter++ ) {
+
+    if(arr[counter].type === type) { // checking to see if the type is toiletries
+
+      totalPrice = totalPrice +  ( arr[counter].price - discountNum ) * arr[counter].quantity;
+
+    } else {
+
+      totalPrice = totalPrice + ( arr[counter].price * arr[counter].quantity );
+
+    }
+
+  }
+
+  return totalPrice.toFixed(2);
+
+
+}
+
+// console.log( discount( shoppingBasket, 1.20, "dairy" ) ) ;
+
+
+/*
+There is shopping basket containing different items
+
+From this shopping basket we need to know how many of each item existents in a particular type
+
+for(START COUNTER, CONDITION, INCREMENT ) {
+
+  let totalAmount = 0;
+
+  Select the first item
+    Check what type it is
+    
+
+  if (ITEMS.TYPE === TYPE YOU ARE LOOK FOR ) {
+
+    totalAmount + ITEMS.QUANTITY;
+  }
+
+}
+
+    RETURN totalAmount
+
+*/
+
+function howMany( arr, type ) {
+
+  let totalAmount = 0;
+
+for( let counter = 0; counter < arr.length; counter++ ) {
+
+  if( arr[counter].type === type ) {
+    totalAmount = totalAmount  + arr[counter].quantity;
+  }
+
+}
+
+return totalAmount;
+
+
+}
+
+console.log( howMany( shoppingBasket, 'dairy') ); // Total should be 9 
