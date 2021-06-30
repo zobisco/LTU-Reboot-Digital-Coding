@@ -55,10 +55,6 @@ main .image img {
 
 button {
   background-color: #f1f1f1;
-  font-size: 16px;
-  letter-spacing: 0.5px;
-  line-height: 0.9;
-  padding: 17px 24px;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   border: none;
