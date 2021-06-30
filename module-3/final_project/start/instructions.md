@@ -20,7 +20,7 @@ Next up is adding event listeners to our buttons, from this we can get some info
 2. Use a for loop to loop over the buttons and add an event listener to each one as shown below
 
 <script>
-      for(let index = 0; index <script buttons.length; index++) {
+      for(let index = 0; index < buttons.length; index++) {
           buttons[index].addEventListener('click', function() {
             console.log(button[index]);
           })
