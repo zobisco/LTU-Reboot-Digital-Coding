@@ -257,4 +257,92 @@ return totalAmount;
 
 }
 
-console.log( howMany( shoppingBasket, 'dairy') ); // Total should be 9 
+// console.log( howMany( shoppingBasket, 'dairy') ); // Total should be 9 
+
+
+/*
+7 times table
+
+FOR LOOP
+  START
+  CONDITION
+  INCREMENT / STEP
+
+  START = 1
+  START <= 12
+  START + 1
+
+
+*/
+
+
+
+
+function multiplyBy( min, max, num ) {
+
+  for( let counter = min; counter <= max; counter++ ) {
+
+    let result = counter * num;
+
+    let message = `${counter} * ${num} = ${result}`;
+
+    console.log( message );
+
+  }
+
+}
+
+// multiplyBy(1, 52, 7);
+
+
+let books = [
+  {
+    title : 'Lord of the rings',
+    author: 'J.R.R. Tolkien',
+    hasRead: false,
+  },
+  {
+    title : 'Harry Potter',
+    author: 'J.K. Rowling',
+    hasRead: true,
+  },
+  {
+    title : 'Happy Coding',
+    author: 'Some Author',
+    hasRead: false,
+  }
+];
+
+// for( let index = 0; index < books.length; index++ ) {
+
+//   let haveRead = books[index].hasRead;
+
+//   switch( haveRead ) {
+//     case true :
+//       console.log(`You have read : ${books[index].title}`);
+//       break;
+//     default :
+//       console.log(`You have not read : ${books[index].title}`)
+//     break;
+//   }
+
+// }
+
+// for(let index = 0; index < books.length; index++ ) {
+
+//   console.log(books[index].hasRead);
+//   console.log(books[index]["hasRead"]);
+
+//   if( books[index].hasRead ) {
+
+//     console.log(`You have read : ${books[index].title}`);
+
+//   } else {
+
+//     console.log(`You have not read : ${books[index].title}`);
+
+//   }
+
+// }
+
+// books.forEach( book => console.log( book ));
