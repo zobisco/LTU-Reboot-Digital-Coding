@@ -4,7 +4,7 @@
 
 2. Inside the index.html you will notice the doctype, html, head, title and body tags
 
-3. Change the information between the title tags to read Google Home Page Clone
+3. Change the information between the title tags to read "Google Home Page Clone"
 
 ## Google Home Page Clone - Part 2
 
