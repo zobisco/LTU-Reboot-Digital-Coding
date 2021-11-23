@@ -117,26 +117,42 @@ console.log(calculator(1, 1, '?'));
 
 // Task 10
 
-let newProductName = 'Baked Beans';
-let newPrice = '£2.00';
-let newQuantity = 10;
-let isInStock = true;
-let newDiscountAmount = 0;
+let strProductName = 'Baked Beans';
+let intPrice = 2;
+let intQuantity = 10;
+let blnInStock = true;
+let intDiscountAmount = 0;
 
-const product = [newProductName, newPrice, newQuantity, isInStock, newDiscountAmount];
+const arrProduct = [
+    strProductName,
+    intPrice,
+    intQuantity,
+    blnInStock,
+    intDiscountAmount];
 
-product[0] = 'Heinz Beans';
+arrProduct[0] = 'Heinz Beans';
+console.log(arrProduct);
 
 // Task 11
 
-let firstIndex = product[0];
-let lastIndex = product[product.length - 1];
+let firstIndex = arrProduct[0];
+let lastIndex = arrProduct[arrProduct.length - 1];
 
 console.log(`The discount of ${firstIndex} is ${lastIndex}.`)
 
 // Task 12
 
-const newProduct = {
+const objNewProduct = {
+    'productName': strProductName,
+    'price': intPrice,
+    'quantity': intQuantity,
+    'inStock': blnInStock,
+    'discountAmount': intDiscountAmount,
+};
+
+console.log(objNewProduct);
+
+const objFruit = {
     productName: 'Apples',
     price: 1.60,
     quantity: 6,
@@ -144,35 +160,45 @@ const newProduct = {
     discountAmount: 0.20,
 };
 
-console.log(newProduct.price);  // dot notation
-console.log(newProduct['price']);  // square bracket notation
+console.log(objFruit);
+console.log(objFruit.price + 2);  // dot notation
+console.log(objFruit['price'] - 1.6);  // square bracket notation
 
 // Task 13
 
-let fruit = newProduct.productName; //
+let intFruit = objFruit.productName; //
 
-console.log(fruit);
+console.log(intFruit);
 
 // Task 14
 
-console.log(`Price before: ${newProduct.price}`);  // dot notation
+console.log(`Price before: ${objFruit.price}`);  // dot notation
 
-newProduct.price = 2.00;  // modifying the object
+objFruit.price = 2.00;  // modifying the object
 
-console.log(`Price after: ${newProduct.price}`)
+console.log(`Price after: ${objFruit.price}`)
 
 // Task 15
 
-newProduct.colour = 'green';  // adding to the object
+objFruit.colour = 'green';  // adding to the object using dot notation
+objFruit['smell'] = 'fragrant';  // adding to the object using bracket notation
 
-console.dir(newProduct);
+console.log(objFruit);
+
+console.dir(objFruit);
 
 // Task 16
 
-function sevenTimesTable() {
-    for (let num = 1; num <= 12; num++) {  // start, condition, step
-        console.log(7 * num)
+function outputTimesTable(number) {
+    for (let counter = 1; counter <= 12; counter++) {  // start, condition, step
+        // set counter as a variable, continue to loop until counter is less than or equal to 12,
+        // add 1 to counter after each iteration
+        let intSum = counter * number
+        let strMessage = counter + '*' + number + '=' + intSum;
+        console.log(strMessage);
     }
 }
 
-sevenTimesTable();
+for(multiplier=1; multiplier<=12; multiplier++){
+    outputTimesTable(multiplier);
+}
